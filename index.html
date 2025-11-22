@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Defend The Truth Ministries</title>
+  <meta name="description" content="Defend The Truth Ministries – Standing firm, proclaiming hope, equipping believers." />
+  <meta name="keywords" content="truth, ministries, faith, hope, gospel" />
+  <meta name="author" content="Defend The Truth Ministries" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-alt: #161b22;
+      --accent: #d4af37;
+      --text: #f0f3f6;
+      --muted: #9aa3b1;
+      --radius: 6px;
+      --max-width: 1080px;
+      --transition: 0.25s ease;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(13,17,23,0.85);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid #222c37;
+      z-index: 50;
+    }
+    nav { display: flex; gap: 1.25rem; align-items: center; }
+    .nav-wrap { max-width: var(--max-width); margin: 0 auto; padding: .85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-weight: 600; letter-spacing: .5px; font-size: 1.05rem; display: flex; align-items: center; gap: .5rem; }
+    .brand span { background: var(--accent); color: #111; padding: .25rem .5rem; border-radius: var(--radius); font-size: .75rem; font-weight: 700; }
+    .hero {
+      padding: clamp(3rem, 8vw, 6rem) 1.25rem 4rem;
+      text-align: center;
+      background: linear-gradient(155deg,#161b22 0%,#0d1117 55%,#10151b 100%);
+    }
+    .hero h1 { margin: 0 0 1rem; font-size: clamp(2.2rem,6vw,3.4rem); line-height: 1.15; }
+    .hero p { max-width: 780px; margin: 0 auto 2rem; font-size: clamp(1.05rem,2.5vw,1.25rem); color: var(--muted); }
+    .cta-row { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: .5rem; padding: .85rem 1.35rem; border-radius: var(--radius);
+      font-weight: 600; font-size: .95rem; letter-spacing: .5px;
+      cursor: pointer; border: 1px solid var(--accent); background: var(--accent);
+      color: #111; transition: var(--transition); text-decoration: none;
+    }
+    .btn.outline { background: transparent; color: var(--accent); }
+    .btn:hover, .btn:focus { filter: brightness(1.05); transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+
+    main { max-width: var(--max-width); margin: 0 auto; padding: 0 1.25rem 4.5rem; }
+    section { margin-top: 3.5rem; }
+    section:first-of-type { margin-top: 2.5rem; }
+    h2 { margin: 0 0 1rem; font-size: clamp(1.6rem,4vw,2.2rem); line-height: 1.2; }
+    .grid { display: grid; gap: 2rem; }
+    @media (min-width: 860px) { .grid.cols-3 { grid-template-columns: repeat(3,1fr); } }
+    .card { background: var(--bg-alt); padding: 1.25rem 1.15rem 1.35rem; border: 1px solid #222c37; border-radius: var(--radius); display: flex; flex-direction: column; gap: .65rem; position: relative; }
+    .card h3 { margin: 0; font-size: 1.05rem; letter-spacing: .5px; }
+    .card p { margin: 0; font-size: .85rem; color: var(--muted); }
+    .tag { position: absolute; top: -10px; right: 12px; background: var(--accent); color: #111; padding: .25rem .6rem; font-size: .65rem; font-weight: 700; border-radius: var(--radius); letter-spacing: .5px; }
+
+    .about { display: grid; gap: 2rem; }
+    @media (min-width: 900px) { .about { grid-template-columns: 1.1fr 1fr; align-items: center; } }
+    .about img { width: 100%; border-radius: var(--radius); border: 1px solid #222c37; display: block; }
+
+    form { display: grid; gap: .85rem; max-width: 480px; }
+    label { font-size: .75rem; text-transform: uppercase; letter-spacing: .5px; font-weight: 600; color: var(--muted); }
+    input, textarea { width: 100%; padding: .75rem .8rem; border: 1px solid #2a343f; border-radius: var(--radius); background: #0f151c; color: var(--text); font: inherit; resize: vertical; }
+    input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+    footer { background: #0b0f13; border-top: 1px solid #222c37; padding: 2.5rem 1.25rem 3.5rem; }
+    .footer-inner { max-width: var(--max-width); margin: 0 auto; display: grid; gap: 2rem; }
+    @media (min-width: 780px) { .footer-inner { grid-template-columns: 1fr auto; } }
+    small { color: var(--muted); }
+
+    .skip-link { position: absolute; left: -999px; top: -999px; }
+    .skip-link:focus { position: static; margin: 1rem; background: var(--accent); padding: .5rem .75rem; color: #111; border-radius: var(--radius); }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header>
+    <div class="nav-wrap">
+      <div class="brand" aria-label="Site brand">
+        <strong>Defend The Truth</strong>
+        <span>MIN</span>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#mission">Mission</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" role="banner">
+    <h1>Standing Firm. Proclaiming Hope.</h1>
+    <p>We are committed to defending timeless truth, proclaiming the good news with clarity, and equipping believers to live courageously and compassionately in a confused world.</p>
+    <div class="cta-row">
+      <a href="#resources" class="btn">Explore Resources</a>
+      <a href="#contact" class="btn outline">Get In Touch</a>
+    </div>
+  </section>
+
+  <main id="main" tabindex="-1">
+    <section id="mission" aria-labelledby="mission-heading">
+      <h2 id="mission-heading">Our Core Focus</h2>
+      <div class="grid cols-3">
+        <article class="card" aria-labelledby="apologetics-title">
+          <span class="tag">Focus</span>
+          <h3 id="apologetics-title">Apologetics</h3>
+          <p>Clear answers to hard questions; strengthening confidence in Scripture.</p>
+        </article>
+        <article class="card" aria-labelledby="teaching-title">
+          <h3 id="teaching-title">Teaching</h3>
+          <p>Rooted exposition and practical formation for everyday discipleship.</p>
+        </article>
+        <article class="card" aria-labelledby="mercy-title">
+          <h3 id="mercy-title">Mercy & Service</h3>
+          <p>Truth expressed through compassionate action among the hurting.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resources" aria-labelledby="resources-heading">
+      <h2 id="resources-heading">Featured Resources</h2>
+      <p>Curated studies, articles, and media to help you think deeply and live faithfully. (Populate this section with dynamic content later.)</p>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <div>
+        <h2 id="about-heading">About The Ministry</h2>
+        <p>Defend The Truth Ministries exists to cultivate resilient followers of Christ who can discern, articulate, and embody the gospel faithfully. What began as a small teaching initiative has grown into a collaborative effort producing resources, cohorts, and local service expressions.</p>
+        <p>We emphasize historic orthodoxy, intellectual rigor seasoned with humble reliance on the Spirit, and holistic formation that integrates belief, character, and mission.</p>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60" alt="Open book with warm light" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>We’d love to hear from you. Send a message below and we’ll respond as soon as possible.</p>
+      <form action="#" method="post" aria-describedby="contact-note">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button class="btn" type="submit">Send Message</button>
+        <p id="contact-note" style="margin:0; font-size:.7rem; color:var(--muted);">Form is static in this prototype. Hook up a backend or service (e.g. Formspree) to process submissions.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <strong>Defend The Truth Ministries</strong><br />
+        <small>Equipping believers to stand firm with clarity and compassion.</small>
+      </div>
+      <div>
+        <small>&copy; <span id="year"></span> Defend The Truth Ministries. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
