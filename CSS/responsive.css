@@ -1,0 +1,98 @@
+/* Responsive Enhancements */
+@media (min-width: 700px) {
+  .nav {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .grid.two {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid.three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr auto auto;
+    align-items: start;
+  }
+
+  /* Mission & Vision Two-Column Layout */
+  .mission-vision__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  /* Footer Two-Column Layout */
+  .footer__content {
+    grid-template-columns: 1.5fr 1fr;
+    align-items: start;
+  }
+
+  /* Challenge Grid - 2 columns on tablet */
+  .challenge-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+
+  .challenge-highlight {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 920px) {
+  .hero__inner {
+    padding: 0 1.5rem;
+  }
+
+  .hero__title-main {
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+  }
+
+  .hero__title-sub {
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+  }
+
+  .pillars__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Challenge Grid - 3 columns on desktop */
+  .challenge-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .challenge-highlight {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-inline: 2rem;
+  }
+
+  .grid.two.gap-lg {
+    align-items: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+  }
+
+  .btn {
+    transition: none;
+  }
+}

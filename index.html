@@ -1,193 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Defend The Truth Ministries</title>
-  <meta name="description" content="Defend The Truth Ministries – Standing firm, proclaiming hope, equipping believers." />
-  <meta name="keywords" content="truth, ministries, faith, hope, gospel" />
+  <meta name="description"
+    content="Defend The Truth Ministries – Standing firm, proclaiming hope, equipping conviction." />
   <meta name="author" content="Defend The Truth Ministries" />
   <link rel="icon" href="favicon.ico" />
-  <style>
-    :root {
-      --bg: #0d1117;
-      --bg-alt: #161b22;
-      --accent: #d4af37;
-      --text: #f0f3f6;
-      --muted: #9aa3b1;
-      --radius: 6px;
-      --max-width: 1080px;
-      --transition: 0.25s ease;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover, a:focus { text-decoration: underline; }
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(13,17,23,0.85);
-      backdrop-filter: saturate(180%) blur(10px);
-      border-bottom: 1px solid #222c37;
-      z-index: 50;
-    }
-    nav { display: flex; gap: 1.25rem; align-items: center; }
-    .nav-wrap { max-width: var(--max-width); margin: 0 auto; padding: .85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; }
-    .brand { font-weight: 600; letter-spacing: .5px; font-size: 1.05rem; display: flex; align-items: center; gap: .5rem; }
-    .brand span { background: var(--accent); color: #111; padding: .25rem .5rem; border-radius: var(--radius); font-size: .75rem; font-weight: 700; }
-    .hero {
-      padding: clamp(3rem, 8vw, 6rem) 1.25rem 4rem;
-      text-align: center;
-      background: linear-gradient(155deg,#161b22 0%,#0d1117 55%,#10151b 100%);
-    }
-    .hero h1 { margin: 0 0 1rem; font-size: clamp(2.2rem,6vw,3.4rem); line-height: 1.15; }
-    .hero p { max-width: 780px; margin: 0 auto 2rem; font-size: clamp(1.05rem,2.5vw,1.25rem); color: var(--muted); }
-    .cta-row { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      gap: .5rem; padding: .85rem 1.35rem; border-radius: var(--radius);
-      font-weight: 600; font-size: .95rem; letter-spacing: .5px;
-      cursor: pointer; border: 1px solid var(--accent); background: var(--accent);
-      color: #111; transition: var(--transition); text-decoration: none;
-    }
-    .btn.outline { background: transparent; color: var(--accent); }
-    .btn:hover, .btn:focus { filter: brightness(1.05); transform: translateY(-2px); }
-    .btn:active { transform: translateY(0); }
-
-    main { max-width: var(--max-width); margin: 0 auto; padding: 0 1.25rem 4.5rem; }
-    section { margin-top: 3.5rem; }
-    section:first-of-type { margin-top: 2.5rem; }
-    h2 { margin: 0 0 1rem; font-size: clamp(1.6rem,4vw,2.2rem); line-height: 1.2; }
-    .grid { display: grid; gap: 2rem; }
-    @media (min-width: 860px) { .grid.cols-3 { grid-template-columns: repeat(3,1fr); } }
-    .card { background: var(--bg-alt); padding: 1.25rem 1.15rem 1.35rem; border: 1px solid #222c37; border-radius: var(--radius); display: flex; flex-direction: column; gap: .65rem; position: relative; }
-    .card h3 { margin: 0; font-size: 1.05rem; letter-spacing: .5px; }
-    .card p { margin: 0; font-size: .85rem; color: var(--muted); }
-    .tag { position: absolute; top: -10px; right: 12px; background: var(--accent); color: #111; padding: .25rem .6rem; font-size: .65rem; font-weight: 700; border-radius: var(--radius); letter-spacing: .5px; }
-
-    .about { display: grid; gap: 2rem; }
-    @media (min-width: 900px) { .about { grid-template-columns: 1.1fr 1fr; align-items: center; } }
-    .about img { width: 100%; border-radius: var(--radius); border: 1px solid #222c37; display: block; }
-
-    form { display: grid; gap: .85rem; max-width: 480px; }
-    label { font-size: .75rem; text-transform: uppercase; letter-spacing: .5px; font-weight: 600; color: var(--muted); }
-    input, textarea { width: 100%; padding: .75rem .8rem; border: 1px solid #2a343f; border-radius: var(--radius); background: #0f151c; color: var(--text); font: inherit; resize: vertical; }
-    input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-
-    footer { background: #0b0f13; border-top: 1px solid #222c37; padding: 2.5rem 1.25rem 3.5rem; }
-    .footer-inner { max-width: var(--max-width); margin: 0 auto; display: grid; gap: 2rem; }
-    @media (min-width: 780px) { .footer-inner { grid-template-columns: 1fr auto; } }
-    small { color: var(--muted); }
-
-    .skip-link { position: absolute; left: -999px; top: -999px; }
-    .skip-link:focus { position: static; margin: 1rem; background: var(--accent); padding: .5rem .75rem; color: #111; border-radius: var(--radius); }
-  </style>
+  <link rel="preload" href="CSS/styles.css" as="style" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <link rel="stylesheet" href="CSS/responsive.css" media="(min-width: 700px)" />
+  <script>
+    document.documentElement.classList.remove('no-js');
+  </script>
 </head>
+
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
-  <header>
-    <div class="nav-wrap">
-      <div class="brand" aria-label="Site brand">
-        <strong>Defend The Truth</strong>
-        <span>MIN</span>
-      </div>
-      <nav aria-label="Primary">
-        <a href="#mission">Mission</a>
-        <a href="#resources">Resources</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+  <header class="site-header" data-component="header">
+    <div class="container flex-between">
+      <a class="brand" href="#hero" aria-label="Homepage">
+        <span class="brand__title">Defend <span class="accent">The Truth</span></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#challenge">Challenge</a></li>
+          <li><a href="#conviction">Conviction</a></li>
+          <li><a href="#pillars">Pillars</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero" role="banner">
-    <h1>Standing Firm. Proclaiming Hope.</h1>
-    <p>We are committed to defending timeless truth, proclaiming the good news with clarity, and equipping believers to live courageously and compassionately in a confused world.</p>
-    <div class="cta-row">
-      <a href="#resources" class="btn">Explore Resources</a>
-      <a href="#contact" class="btn outline">Get In Touch</a>
-    </div>
-  </section>
-
   <main id="main" tabindex="-1">
-    <section id="mission" aria-labelledby="mission-heading">
-      <h2 id="mission-heading">Our Core Focus</h2>
-      <div class="grid cols-3">
-        <article class="card" aria-labelledby="apologetics-title">
-          <span class="tag">Focus</span>
-          <h3 id="apologetics-title">Apologetics</h3>
-          <p>Clear answers to hard questions; strengthening confidence in Scripture.</p>
-        </article>
-        <article class="card" aria-labelledby="teaching-title">
-          <h3 id="teaching-title">Teaching</h3>
-          <p>Rooted exposition and practical formation for everyday discipleship.</p>
-        </article>
-        <article class="card" aria-labelledby="mercy-title">
-          <h3 id="mercy-title">Mercy & Service</h3>
-          <p>Truth expressed through compassionate action among the hurting.</p>
-        </article>
+    <!-- Hero -->
+    <section id="hero" class="section hero" aria-labelledby="hero-heading" data-component="hero">
+      <div class="hero__background"></div>
+      <div class="container hero__inner">
+        <div class="hero__badge">Est. 2025</div>
+        <h1 id="hero-heading" class="hero__title">
+          <span class="hero__title-main">Defend the Truth</span>
+          <span class="hero__title-sub">Ministries</span>
+        </h1>
+        <p class="hero__tagline">Equipping a generation to defend timeless truth with conviction and compassion.</p>
+        <blockquote class="scripture hero__scripture"
+          cite="https://www.biblegateway.com/passage/?search=2+Timothy+4%3A2&version=ESV">
+          <p>"Preach the word; be ready in season and out of season." <cite>2 Timothy 4:2</cite></p>
+        </blockquote>
+        <div class="actions">
+          <a href="#mission-vision" class="btn btn-primary">
+            <span>Discover Our Mission</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#pillars" class="btn outline">Core Pillars</a>
+        </div>
       </div>
     </section>
 
-    <section id="resources" aria-labelledby="resources-heading">
-      <h2 id="resources-heading">Featured Resources</h2>
-      <p>Curated studies, articles, and media to help you think deeply and live faithfully. (Populate this section with dynamic content later.)</p>
+    <!-- Mission & Vision -->
+    <section id="mission-vision" class="section mission-vision" aria-labelledby="mission-vision-heading"
+      data-component="mission-vision">
+      <div class="container">
+        <h2 id="mission-vision-heading" class="sr-only">Our Mission and Vision</h2>
+        <div class="mission-vision__grid">
+          <article id="mission" class="mission-vision__item" aria-labelledby="mission-heading">
+            <h3 id="mission-heading" class="mission-vision__title">Mission</h3>
+            <p class="lead">To equip and train Christian men and women to boldly share and faithfully defend the Truth
+              of God's Word—raising up leaders who stand with conviction on the Scriptures in a secular world.</p>
+          </article>
+
+          <article id="vision" class="mission-vision__item" aria-labelledby="vision-heading">
+            <h3 id="vision-heading" class="mission-vision__title">Vision</h3>
+            <p class="lead">A generation of God-fearing believers courageously proclaiming and defending God's Truth
+              across cultures—marked by clarity of doctrine, holiness of life, and sacrificial love.</p>
+            <blockquote class="scripture modest" cite="https://www.biblegateway.com/passage/?search=Jude+3&version=ESV">
+              <p>"Contend for the faith that was once for all delivered to the saints." <cite>Jude 3</cite></p>
+            </blockquote>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="about" aria-labelledby="about-heading">
-      <div>
-        <h2 id="about-heading">About The Ministry</h2>
-        <p>Defend The Truth Ministries exists to cultivate resilient followers of Christ who can discern, articulate, and embody the gospel faithfully. What began as a small teaching initiative has grown into a collaborative effort producing resources, cohorts, and local service expressions.</p>
-        <p>We emphasize historic orthodoxy, intellectual rigor seasoned with humble reliance on the Spirit, and holistic formation that integrates belief, character, and mission.</p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60" alt="Open book with warm light" loading="lazy" />
+    <!-- Current Challenge -->
+    <section id="challenge" class="section challenge-section" aria-labelledby="challenge-heading"
+      data-component="challenge-grid">
+      <div class="container">
+        <h2 id="challenge-heading" class="text-center mb-6">The Current Challenge</h2>
+        <p class="lead text-center max-w-prose mx-auto mb-12">
+          We live amid accelerating secularization, moral confusion, and doctrinal drift. The church must respond with
+          clarity and conviction.
+        </p>
+
+        <div class="challenge-grid">
+          <!-- Challenge Card 1 -->
+          <article class="challenge-card">
+            <div class="challenge-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="challenge-card__title">Doctrinal Drift</h3>
+            <p class="challenge-card__text">Many believers feel ill-equipped to articulate why historic Christianity
+              remains coherent, compelling, and necessary.</p>
+          </article>
+
+          <!-- Challenge Card 2 -->
+          <article class="challenge-card">
+            <div class="challenge-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="challenge-card__title">Cultural Pressure</h3>
+            <p class="challenge-card__text">Culture catechizes daily. If the church does not form minds and hearts with
+              truth, other narratives will.</p>
+          </article>
+
+          <!-- Challenge Card 3 -->
+          <article class="challenge-card">
+            <div class="challenge-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z"
+                  stroke="currentColor" stroke-width="2" />
+                <path d="M3 10H21" stroke="currentColor" stroke-width="2" />
+                <circle cx="7" cy="14" r="1" fill="currentColor" />
+              </svg>
+            </div>
+            <h3 class="challenge-card__title">Moral Confusion</h3>
+            <p class="challenge-card__text">Silence and vagueness breed fragility. Clear biblical teaching is essential
+              for spiritual resilience.</p>
+          </article>
+
+          <!-- Challenge Card 4 -->
+          <article class="challenge-card">
+            <div class="challenge-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="challenge-card__title">Generational Gap</h3>
+            <p class="challenge-card__text">Younger generations need equipped mentors who can defend the faith with both
+              conviction and compassion.</p>
+          </article>
+
+          <!-- What's at Stake - Center Highlight -->
+          <article class="challenge-highlight">
+            <h3 class="challenge-highlight__title">What's at Stake?</h3>
+            <ul class="challenge-highlight__list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.6 4L7 13.6L3.4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>Confidence in Scripture</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.6 4L7 13.6L3.4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>Clarity in identity & purpose</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.6 4L7 13.6L3.4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>Courage in public witness</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.6 4L7 13.6L3.4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>Compassion grounded in truth</span>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <p>We’d love to hear from you. Send a message below and we’ll respond as soon as possible.</p>
-      <form action="#" method="post" aria-describedby="contact-note">
-        <div>
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" autocomplete="name" required />
+    <!-- Why Conviction Matters -->
+    <section id="conviction" class="section alt" aria-labelledby="conviction-heading" data-component="grid-block">
+      <div class="container flow">
+        <h2 id="conviction-heading">Why Conviction Matters</h2>
+        <div class="grid three gap-lg">
+          <article class="card">
+            <h3>Anchors the Soul</h3>
+            <p>Deep theological roots prevent drift under pressure and novelty.</p>
+          </article>
+          <article class="card">
+            <h3>Shapes Holy Practice</h3>
+            <p>Right belief fuels obedience, compassion, and wise decision-making.</p>
+          </article>
+          <article class="card">
+            <h3>Invites Credible Witness</h3>
+            <p>Clear articulation of truth opens doors for gospel proclamation.</p>
+          </article>
         </div>
-        <div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
+        <blockquote class="scripture modest"
+          cite="https://www.biblegateway.com/passage/?search=1+Peter+3%3A15&version=ESV">
+          <p>“Always be prepared to make a defense… yet do it with gentleness and respect.” <cite>1 Peter 3:15</cite>
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Goals / Core Pillars -->
+    <section id="pillars" class="section" aria-labelledby="pillars-heading" data-component="pillars">
+      <div class="container flow">
+        <h2 id="pillars-heading">Core Pillars</h2>
+        <div class="grid three gap-lg pillars__grid">
+          <article class="pillar card">
+            <h3>Apologetics</h3>
+            <p>Reasoned defense of the faith addressing doubts and objections.</p>
+          </article>
+          <article class="pillar card">
+            <h3>Biblical Literacy</h3>
+            <p>Training minds to interpret and apply Scripture accurately.</p>
+          </article>
+          <article class="pillar card">
+            <h3>Gospel Clarity</h3>
+            <p>Keeping the central message of redemption explicit and vivid.</p>
+          </article>
+          <article class="pillar card">
+            <h3>Discipleship Formation</h3>
+            <p>Holistic shaping of character, habits, and mission alignment.</p>
+          </article>
+          <article class="pillar card">
+            <h3>Compassionate Service</h3>
+            <p>Embodied love that reflects Christ’s mercy toward the vulnerable.</p>
+          </article>
+          <article class="pillar card">
+            <h3>Leadership Development</h3>
+            <p>Preparing resilient, articulate leaders for kingdom influence.</p>
+          </article>
         </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button class="btn" type="submit">Send Message</button>
-        <p id="contact-note" style="margin:0; font-size:.7rem; color:var(--muted);">Form is static in this prototype. Hook up a backend or service (e.g. Formspree) to process submissions.</p>
-      </form>
+      </div>
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <div class="footer-inner">
-      <div>
-        <strong>Defend The Truth Ministries</strong><br />
-        <small>Equipping believers to stand firm with clarity and compassion.</small>
+  <footer class="site-footer" data-component="footer" role="contentinfo">
+    <div class="footer__wave"></div>
+    <div class="container footer__inner">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <p class="brand__title">Defend <span class="accent">The Truth</span> Ministries</p>
+          <blockquote class="footer__scripture">
+            <p>"Sanctify them in the truth; your word is truth."</p>
+            <cite>— John 17:17</cite>
+          </blockquote>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer Navigation">
+          <h3 class="footer__nav-title">Quick Links</h3>
+          <ul class="nav__list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#mission-vision">Mission & Vision</a></li>
+            <li><a href="#challenge">The Challenge</a></li>
+            <li><a href="#conviction">Why Conviction</a></li>
+            <li><a href="#pillars">Core Pillars</a></li>
+          </ul>
+        </nav>
       </div>
-      <div>
-        <small>&copy; <span id="year"></span> Defend The Truth Ministries. All rights reserved.</small>
+
+      <div class="footer__bottom">
+        <small class="footer__legal">&copy; <span id="year"></span> Defend The Truth Ministries. All rights
+          reserved.</small>
+        <div class="footer__social">
+          <a href="#" aria-label="Back to top" class="back-to-top">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js" defer></script>
 </body>
+
 </html>
