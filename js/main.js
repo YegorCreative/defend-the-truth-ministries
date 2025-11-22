@@ -8,13 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
             
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            // Validate that href is a valid anchor link
+            if (targetId && targetId.startsWith('#') && /^#[a-zA-Z0-9_-]+$/.test(targetId)) {
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
         });
     });
@@ -34,10 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     link.classList.remove('active');
                 });
                 
-                // Add active class to corresponding nav link
-                const activeLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
+                // Validate and sanitize the ID before using it in a selector
+                const sectionId = entry.target.id;
+                if (sectionId && /^[a-zA-Z0-9_-]+$/.test(sectionId)) {
+                    // Add active class to corresponding nav link
+                    const activeLink = document.querySelector(`.nav-menu a[href="#${CSS.escape(sectionId)}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
                 }
             }
         });

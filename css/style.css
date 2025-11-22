@@ -44,9 +44,12 @@ header h1 {
     transition: color 0.3s ease;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a:focus {
     color: #3498db;
     text-decoration: underline;
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
 }
 
 /* Hero Section */
