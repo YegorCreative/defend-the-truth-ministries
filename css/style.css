@@ -46,6 +46,7 @@ header h1 {
 
 .nav-menu a:hover {
     color: #3498db;
+    text-decoration: underline;
 }
 
 /* Hero Section */

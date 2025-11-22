@@ -46,6 +46,4 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
         sectionObserver.observe(section);
     });
-
-    console.log('Defend the Truth Ministries - Website Loaded');
 });
