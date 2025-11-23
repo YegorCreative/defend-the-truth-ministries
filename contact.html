@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Defend The Truth Ministries</title>
+    <meta name="description"
+        content="Get in touch with Defend The Truth Ministries for questions, partnerships, or speaking invitations." />
+    <meta name="author" content="Defend The Truth Ministries" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preload" href="css/styles.css" as="style" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script>
+        document.documentElement.classList.remove('no-js');
+    </script>
+</head>
+
+<body>
+    <header class="site-header" data-component="header">
+        <div class="container flex-between">
+            <a class="brand" href="index.html" aria-label="Homepage">
+                <img src="assets/images/logo.png" alt="Defend The Truth Ministries Logo" class="brand__logo">
+                <span class="brand__title">Defend <span class="accent">The Truth</span></span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <nav id="primary-nav" class="nav" aria-label="Primary">
+                <ul class="nav__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="section alt">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-header__title">Get in Touch</h1>
+                    <p class="section-header__description">Use this form to reach Defend The Truth Ministries for
+                        questions, partnerships, or speaking invitations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info -->
+        <section class="section">
+            <div class="container">
+                <div class="grid two gap-lg">
+                    <!-- Contact Form -->
+                    <div class="card reveal">
+                        <form class="contact-form stack">
+                            <div>
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="your@email.com" required>
+                            </div>
+                            <div>
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5"
+                                    placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="flow reveal">
+                        <h3>Connect With Us</h3>
+                        <p>We'd love to hear from you. Whether you have a question about our resources, want to invite
+                            us to speak, or just want to say hello, please don't hesitate to reach out.</p>
+
+                        <div class="contact-info stack">
+                            <div class="contact-item">
+                                <strong>Email:</strong>
+                                <a href="mailto:info@defendthetruth.org" class="accent-link">info@defendthetruth.org</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Social Media:</strong>
+                                <div class="social-links">
+                                    <a href="#" class="social-link">Facebook</a>
+                                    <a href="#" class="social-link">Twitter</a>
+                                    <a href="#" class="social-link">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer__wave"></div>
+        <div class="container footer__inner">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <a class="brand" href="index.html">
+                        <img src="assets/images/logo.png" alt="Defend The Truth Ministries Logo" class="brand__logo">
+                        <span class="brand__title">Defend <span class="accent">The Truth</span></span>
+                    </a>
+                    <p class="text-muted">Standing firm. Proclaiming hope. Equipping conviction.</p>
+                </div>
+                <div class="footer__scripture">
+                    <p>"Sanctify them in the truth; your word is truth."</p>
+                    <cite>John 17:17</cite>
+                </div>
+            </div>
+            <div class="footer__bottom flex-between">
+                <p id="copyright">&copy; <span id="year"></span> Defend The Truth Ministries. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 // Minimal JS for Defend The Truth Ministries
-(function() {
+(function () {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
